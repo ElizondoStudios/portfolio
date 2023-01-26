@@ -1,12 +1,15 @@
 :root{
   font-size: 10px;
+  --text-color: white;
+  --background: linear-gradient(rgb(32, 24, 54), rgb(46, 15, 42));
   /* font-family: 'Inter', sans-serif;
   font-family: 'Manrope', sans-serif;
   font-family: 'Poppins', sans-serif; */
 }
 
 body{
-  background-color: rgb(31, 31, 31);
+  padding: 0;
+  margin: 0;
 }
 
 /* ##### App ##### */
@@ -16,6 +19,9 @@ body{
   justify-content: center;
   margin: 0;
   padding: 0;
+
+  height: 100vh;
+  background-image: var(--background);
 }
 
   .App--card{
@@ -25,7 +31,7 @@ body{
     align-items: center;
     flex-direction: column;
 
-    width: 80%;
+    width: 80vw;
     max-width: 600px;
     height: 600px;
     background-color: rgba(138, 138, 138, 0.199);
@@ -39,58 +45,90 @@ body{
       display: none;
     }
 
-      .App--card--about-me{
+      .App--card>section{
         display: flex;
         flex-direction: column;
         align-items: center;
 
         margin-top: 100px;
+      }
+
+      .App--card--about-me{
         cursor: pointer;
       }
 
+        .App--card--social--icons{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+
+          .App--card--social--icons>img{
+            width: 10%;
+            filter: invert(100%);
+          }
+
+    .component{
+      filter: blur(1px);
+      color: var(--text-color);
+      opacity: 0;
+      transition: all 1s;
+    }
+
     h1.component{
       font-family: 'Inter', sans-serif;
-      color: white;
       font-weight: bold;
       font-size: 3.5rem;
       margin: 0;
       margin-top: 10px;
-
-      opacity: 0;
-      transition: all 1s;
 
       transform: translateY(-50%);
     }
 
     h2.component{
       font-family: 'Inter', sans-serif;
-      color: white;
       font-weight: 500;
       font-size: 2.5rem;
       margin: 0;
       margin-top: 10px;
-      opacity: 0;
+
       transition: all 0.8s;
       transform: translateY(-100%);
     }
 
     h3.component{
       font-family: 'Inter', sans-serif;
-      color: white;
       font-weight: 500;
       font-size: 1.6rem;
 
       margin: 0px;
       margin-top: 8px;
 
-      opacity: 0;
-      transition: all 1s;
       transform: translateY(100%);
+
+      user-select: none;
     }
 
-    .show{
-      opacity: 1;
+    p.component{
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+
+      transform: translateX(-100%);
     }
+
+    #test{
+      margin-top: 1000px;
+    }
+
+
+/* ##### media  querys ##### */
+
+@media(prefers-reduced-motion){
+  .component{
+    transition: none;
+  }
+}
 
 /* @media (prefers-color-scheme: light) {
 
