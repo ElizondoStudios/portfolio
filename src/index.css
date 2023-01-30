@@ -57,19 +57,41 @@ body{
         cursor: pointer;
       }
 
-        .App--card--social--icons{
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-        }
+/*##### Socials ##### */
 
-          .App--card--social--icons>img{
-            width: 10%;
-            filter: invert(100%);
-          }
+.Socials{
+  width: 100%;
+}
 
+  .Socials--icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    margin-top: 5%;
+  }
+
+    .icon{
+      max-width: 50px;
+    }
+
+    #icon1{
+      transition: all 2s;
+    }
+
+    #icon2{
+      transition: all 1s;
+    }
+
+    #icon3{
+      transition: all 0.5s;
+    }
+
+
+/* ##### components for animation ##### */
     .component{
-      filter: blur(1px);
+      filter: blur(2px);
       color: var(--text-color);
       opacity: 0;
       transition: all 1s;
@@ -117,9 +139,24 @@ body{
       transform: translateX(-100%);
     }
 
+    a.component{
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+
+      transform: translateX(-100%) rotate(90deg);
+    }
+
     #test{
       margin-top: 1000px;
     }
+
+/* ##### projects ##### */
+#project1{
+  background-color: rgba(70, 70, 70, 0.795);
+  width: 30px;
+  border-radius: 5%;
+}
 
 
 /* ##### media  querys ##### */
