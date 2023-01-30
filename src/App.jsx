@@ -1,8 +1,6 @@
 // import { useInView } from 'react-intersection-observer';
 import React from "react"
-import GithubIcon from "./assets/github-svgrepo-com.svg"
-import LinkedinIcon from "./assets/linkedin-svgrepo-com.svg"
-import MailIcon from "./assets/mail-02-svgrepo-com.svg"
+import Socials from "./components/Socials"
 
 function App() {
 
@@ -22,7 +20,7 @@ function App() {
   const options={
     root: document.querySelector('.App--card'),
     rootMargin: '0px',
-    threshold: 0
+    threshold: 0.2
   }
 
   React.useEffect(()=>{
@@ -63,15 +61,11 @@ function App() {
         </section>
         <section className="App--card--projects">
           <h3 className="component">Projects 😎</h3>
-        </section>
-        <section className="App--card--social">
-          <h3 className="component">Socials 📱</h3>
-          <div className="App--card--social--icons">
-            <img src={GithubIcon} alt="Github icon" />
-            <img src={LinkedinIcon} alt="Linkedin icon" />
-            <img src={MailIcon} alt="Email Icon" />
+          <div className="App--card--projects--cards">
+            <div id="project1"></div>
           </div>
         </section>
+        <Socials/>
         <div id="test">Hello world!</div>
       </div>
     </div>
