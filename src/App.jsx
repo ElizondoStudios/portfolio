@@ -1,6 +1,8 @@
 // import { useInView } from 'react-intersection-observer';
 import React from "react"
 import Socials from "./components/Socials"
+import Projects from "./components/Projects"
+import AboutMe from "./components/AboutMe"
 
 function App() {
 
@@ -54,17 +56,8 @@ function App() {
       <div className="App--card" ref={containerRef}>
         <h1 className="component show">José Luis Elizondo F.</h1>
         <h2 className="component">✨portfolio✨</h2>
-        <section className="App--card--about-me" onClick={toggleShowAM}>
-          <h3 className="component">About me 👇</h3>
-          {showAM && <p className="component">Hello world!</p>}
-          <h3 className="component">▼</h3>
-        </section>
-        <section className="App--card--projects">
-          <h3 className="component">Projects 😎</h3>
-          <div className="App--card--projects--cards">
-            <div id="project1"></div>
-          </div>
-        </section>
+        <AboutMe showAM={showAM} toggleShowAM={toggleShowAM}/>
+        <Projects/>
         <Socials/>
         <div id="test">Hello world!</div>
       </div>
