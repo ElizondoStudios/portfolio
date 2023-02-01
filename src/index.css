@@ -26,10 +26,9 @@ body{
 
   .App--card{
     position: fixed;
-    top: 5vh;
+    top: 2.5vh;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
 
     width: 80vw;
@@ -108,7 +107,8 @@ body{
       margin: 0;
       margin-top: 10px;
 
-      justify-content: center;
+      text-justify: center;
+      text-align: center;
       transform: translateY(-50%);
     }
 
