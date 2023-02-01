@@ -26,7 +26,7 @@ body{
 
   .App--card{
     position: fixed;
-    top: 20px;
+    top: 5vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -34,7 +34,7 @@ body{
 
     width: 80vw;
     max-width: 600px;
-    height: 600px;
+    height: 90vh;
     background-color: rgba(138, 138, 138, 0.199);
     border-radius: 5%;
 
@@ -57,6 +57,7 @@ body{
 /* ##### About me ##### */
 .About-me{
   cursor: pointer;
+  user-select: none;
 }
 
 /*##### Socials ##### */
@@ -107,7 +108,7 @@ body{
       margin: 0;
       margin-top: 10px;
 
-      justify-self: center;
+      justify-content: center;
       transform: translateY(-50%);
     }
 
