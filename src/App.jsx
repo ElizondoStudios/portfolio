@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <div className="App--card" ref={containerRef}>
-        <h1 className="component show">José Luis Elizondo F.</h1>
+        <h1 className="component">José Luis Elizondo F.</h1>
         <h2 className="component">✨portfolio✨</h2>
         <AboutMe showAM={showAM} toggleShowAM={toggleShowAM}/>
         <Projects/>
