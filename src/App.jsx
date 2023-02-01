@@ -59,7 +59,6 @@ function App() {
         <AboutMe showAM={showAM} toggleShowAM={toggleShowAM}/>
         <Projects/>
         <Socials/>
-        <div id="test">Hello world!</div>
       </div>
     </div>
   )
