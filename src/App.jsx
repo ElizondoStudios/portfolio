@@ -4,6 +4,7 @@ import Socials from "./components/Socials"
 import Projects from "./components/Projects"
 import AboutMe from "./components/AboutMe"
 import information from "./information"
+import Config from "./components/Config"
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
   const options={
     root: document.querySelector('.App--card'),
     rootMargin: '0px',
-    threshold: 0.3
+    threshold: 0.0
   }
 
   React.useEffect(()=>{
@@ -46,32 +47,41 @@ function App() {
   },[containerRef, options])
 
   // State for 'about me'
-  const [showAM, setShowAM]= React.useState(false);
-
-  // State for languaje
-  const [languaje, setLanguaje]= React.useState("engli") 
+  const [showAM, setShowAM]= React.useState(false)
 
   function toggleShowAM(){
     setShowAM(prevShowAM => !prevShowAM)
   }
 
+  // State for languaje
+  const [languaje, setLanguaje]= React.useState("English") 
+
+  function changeLanguaje(lang){
+    setLanguaje(lang)
+  }
+
   return (
     <div className="App">
+      <Config
+        lang={languaje}
+        changeLanguaje={changeLanguaje}
+      />
       <div className="App--card" ref={containerRef}>
         <h1 className="component">José Luis Elizondo F.</h1>
         <h2 className="component">
-          {languaje==="english"? information.english.title: information.spanish.title}
+          {languaje==="English"? information.english.title: information.spanish.title}
         </h2>
         <AboutMe
          showAM={showAM} toggleShowAM={toggleShowAM}
-         title={languaje==="english"? information.english.about: information.spanish.about}
-         text={languaje==="english"? information.english.about_text: information.spanish.about_text}
+         title={languaje==="English"? information.english.about: information.spanish.about}
+         text={languaje==="English"? information.english.about_text: information.spanish.about_text}
         />
         <Projects
-         title={languaje==="english"? information.english.projects: information.spanish.projects}
+         title={languaje==="English"? information.english.projects: information.spanish.projects}
+         lang={languaje}
         />
         <Socials
-         title={languaje==="english"? information.english.socials: information.spanish.socials}
+         title={languaje==="English"? information.english.socials: information.spanish.socials}
         />
       </div>
     </div>

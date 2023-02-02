@@ -1,0 +1,63 @@
+.Config{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    z-index: 1;
+}
+
+    .Config--icon{
+        width: 6vw;
+        transition: all 0.5s;
+        z-index: 5;
+    }
+
+        .Config--icon:hover{
+            transform: scale(1.1) rotate(90deg);
+        }
+
+        .Config--icon:active{
+            filter: invert(50%);
+            transform: scale(0.9) rotate(90deg);
+        }
+
+    .Config--menu{
+        width: 30vw;
+        height: 60vh;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background-color: rgba(94, 30, 102, 0.9);
+        color: white;
+        position: absolute;
+    }
+
+        .Config--menu>h3{
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+
+/* ##### languaje ##### */
+select{
+    appearance: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 8px;
+
+    border-radius: 5px;
+    outline: none;
+}
+
+    select::-ms-expand {
+        display: none;
+    }

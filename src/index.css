@@ -1,10 +1,11 @@
+*:focus{
+  outline: solid 2px violet;
+}
+
 :root{
   font-size: 10px;
   --text-color: white;
   --background: linear-gradient(rgb(32, 24, 54), rgb(46, 15, 42));
-  /* font-family: 'Inter', sans-serif;
-  font-family: 'Manrope', sans-serif;
-  font-family: 'Poppins', sans-serif; */
 }
 
 body{
@@ -175,7 +176,7 @@ body{
   margin-top: 10px;
 }
 
-  .project-card:hover{
+  .project-card:hover {
     background-color: rgba(120, 42, 165, 0.5);
   }
 

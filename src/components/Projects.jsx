@@ -29,7 +29,7 @@ function Projects(props){
     },
     {
       key: nanoid(),
-      projectName: "linear algebra",
+      projectName: props.lang==="English"? "linear algebra": "álgebra lineal",
       link: "https://gauss-jordan.netlify.app/",
       img: algebraSS
     }
