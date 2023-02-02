@@ -49,7 +49,7 @@ function App() {
   const [showAM, setShowAM]= React.useState(false);
 
   // State for languaje
-  const [languaje, setLanguaje]= React.useState("english") 
+  const [languaje, setLanguaje]= React.useState("engli") 
 
   function toggleShowAM(){
     setShowAM(prevShowAM => !prevShowAM)

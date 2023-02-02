@@ -18,7 +18,16 @@ export default {
     spanish:{
         title: "✨portafolio✨",
         about: "Sobre mí 👇",
-        about_text:[],
+        about_text:[
+            "Mi nombre es José Luis Elizondo Figueroa. Soy un estudiante de ingeniería en computación inteligente (ingeniería en software enfocada en inteligencia artificial).",
+            "Me encanta programar. Estos últimos años me he dedicado a aprender desarrollo frontend. Por supuesto, entre mis habilidades se incluyen JavaScript, HTML y CSS, pero también he aprendido ReactJS, para hacer páginas más responsivas e interactivas.",
+            "Aunque principalmente trabajo en React, También tengo experiencia con otros lenguajes de programación, como: C++, C#, Java, Python y R.",
+            "Otras cosas notables sobre mí son:",
+            "Soy poliglota, hablo español, mi lengua natal, inglés y un poco de francés.",
+            "Tengo mucha experiencia usando Photoshop, aunque no soy profesional, lo he usado por años, para crear assets para mis proyectos y por diversión.",
+            "Mis pasatiempos incluyen: ir al gym, jugar videojuegos y salir con mis amigos.",
+            "Algo divertido sobre mí es que me encantan los perros, son mi animal favorito. Tengo dos perros, sus nombres son Mac y Ron."
+        ],
         projects: "Projectos 😎",
         socials: "Redes sociales 📱"
     }
