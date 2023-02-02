@@ -3,6 +3,7 @@ import React from "react"
 import Socials from "./components/Socials"
 import Projects from "./components/Projects"
 import AboutMe from "./components/AboutMe"
+import information from "./information"
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
   const options={
     root: document.querySelector('.App--card'),
     rootMargin: '0px',
-    threshold: 0.2
+    threshold: 0.3
   }
 
   React.useEffect(()=>{
@@ -47,6 +48,9 @@ function App() {
   // State for 'about me'
   const [showAM, setShowAM]= React.useState(false);
 
+  // State for languaje
+  const [languaje, setLanguaje]= React.useState("english") 
+
   function toggleShowAM(){
     setShowAM(prevShowAM => !prevShowAM)
   }
@@ -55,10 +59,20 @@ function App() {
     <div className="App">
       <div className="App--card" ref={containerRef}>
         <h1 className="component">José Luis Elizondo F.</h1>
-        <h2 className="component">✨portfolio✨</h2>
-        <AboutMe showAM={showAM} toggleShowAM={toggleShowAM}/>
-        <Projects/>
-        <Socials/>
+        <h2 className="component">
+          {languaje==="english"? information.english.title: information.spanish.title}
+        </h2>
+        <AboutMe
+         showAM={showAM} toggleShowAM={toggleShowAM}
+         title={languaje==="english"? information.english.about: information.spanish.about}
+         text={languaje==="english"? information.english.about_text: information.spanish.about_text}
+        />
+        <Projects
+         title={languaje==="english"? information.english.projects: information.spanish.projects}
+        />
+        <Socials
+         title={languaje==="english"? information.english.socials: information.spanish.socials}
+        />
       </div>
     </div>
   )

@@ -140,8 +140,13 @@ body{
       font-family: 'Manrope', sans-serif;
       font-weight: 300;
       font-size: 1.2rem;
+    
+      padding-left: 15px;
+      padding-right: 15px;
 
-      transform: translateX(-100%);
+      text-align: center;
+      text-justify: distribute;
+      transform: translateX(-60%);
     }
 
     a.component{

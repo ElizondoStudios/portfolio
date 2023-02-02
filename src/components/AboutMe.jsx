@@ -1,11 +1,12 @@
-function AboutMe(props){
-    const info="My name is José Luis Elizondo Figueroa"
+import { nanoid } from "nanoid"
 
+function AboutMe(props){
+    const info= props.text.map(e => <p className="component" key={nanoid()}>{e}</p>)
 
     return(
         <section className="About-me" onClick={props.toggleShowAM}>
-          <h3 className="component">About me 👇</h3>
-          {props.showAM && <p className="component">{info}</p>}
+          <h3 className="component">{props.title}</h3>
+          {props.showAM && info}
           <h3 className="component">▼</h3>
         </section>
     )

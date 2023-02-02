@@ -2,10 +2,10 @@ import GithubIcon from "../assets/github-white.svg"
 import LinkedinIcon from "../assets/linkedin-white.svg"
 import MailIcon from "../assets/email-white.svg"
 
-function Socials(){
+function Socials(props){
     return(
         <section className="Socials">
-          <h3 className="component">Socials 📱</h3>
+          <h3 className="component">{props.title}</h3>
           <div className="Socials--icons">
             <a href="https://github.com/ElizondoStudios" className="component">
               <img src={GithubIcon} alt="Github icon" className="icon" id="icon1"/>
