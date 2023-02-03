@@ -12,6 +12,7 @@
 
     .Config--icon{
         width: 6vw;
+        max-width: 50px;
         transition: all 0.5s;
         z-index: 5;
     }
@@ -39,6 +40,7 @@
         color: white;
         position: absolute;
     }
+    
 
         .Config--menu>h3{
             font-family: 'Inter', sans-serif;

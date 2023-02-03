@@ -54,11 +54,12 @@ function App() {
   }
 
   // State for languaje
-  const [languaje, setLanguaje]= React.useState("English") 
-
+  const [languaje, setLanguaje]= React.useState(navigator.language.startsWith("es")?"Español":"English") 
+  
   function changeLanguaje(lang){
     setLanguaje(lang)
   }
+
 
   return (
     <div className="App">
