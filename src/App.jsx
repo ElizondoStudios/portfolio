@@ -24,7 +24,7 @@ function App() {
   const options={
     root: document.querySelector('.App--card'),
     rootMargin: '0px',
-    threshold: 0.0
+    threshold: 0.1
   }
 
   React.useEffect(()=>{
