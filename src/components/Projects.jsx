@@ -4,6 +4,7 @@ import pokedexSS from "../assets/pokedex_screenshot.png"
 import tenziesSS from "../assets/tenzies_screenshot.png"
 import quizzicalSS from "../assets/quizzical_screenshot.png"
 import algebraSS from "../assets/algebra_screenshot.png"
+import tiktaktoeSS from "../assets/tiktaktoe_screenshot.png"
 
 
 
@@ -32,6 +33,12 @@ function Projects(props){
       projectName: props.lang==="English"? "linear algebra": "álgebra lineal",
       link: "https://gauss-jordan.netlify.app/",
       img: algebraSS
+    },
+    {
+      key: nanoid(),
+      projectName: "TikTakToe",
+      link: "https://tiktaktoe-elizondo.netlify.app",
+      img: tiktaktoeSS
     }
   ]
 
