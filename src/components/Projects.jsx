@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard"
 import { nanoid } from "nanoid"
+import pokedexTSSS from "../assets/pokedex-TS_screenshot.png"
 import pokedexSS from "../assets/pokedex_screenshot.png"
 import tenziesSS from "../assets/tenzies_screenshot.png"
 import quizzicalSS from "../assets/quizzical_screenshot.png"
@@ -10,6 +11,12 @@ import tiktaktoeSS from "../assets/tiktaktoe_screenshot.png"
 
 function Projects(props){
   const info=[
+    {
+      key: nanoid(),
+      projectName: "pokedex TS and BS",
+      link: "https://pokedex-elizondo.netlify.app",
+      img: pokedexTSSS
+    },
     {
       key: nanoid(),
       projectName: "pokedex",
